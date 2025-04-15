@@ -8,7 +8,7 @@ export default function Agenda(){
 
     return (
         <>
-        <Tabs defaultValue="account" className="w-full">
+        <Tabs defaultValue="genralDisclosure" className="w-full">
         <TabsList>
             <TabsTrigger value="genralDisclosure">GRI</TabsTrigger>
             <TabsTrigger value="environmentCompliance">Environmental Compliance 2016</TabsTrigger>
