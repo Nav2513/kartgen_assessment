@@ -4,7 +4,7 @@ import EnvironmentalCompliance from "./environmentalCompliance";
 import HumanRightsAssessment2016 from "./humanRightAssessment2016";
 
 
-export default function Topic(){
+export default function Agenda(){
 
     return (
         <>

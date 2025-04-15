@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider, SignInButton, SignUpButton, SignedOut, UserButton, SignedIn } from "@clerk/nextjs";
+import { ClerkProvider, SignInButton, SignedOut, UserButton, SignedIn } from "@clerk/nextjs";
+import Products from "./components/organisms/product";
+import About from "./components/organisms/about";
+import Home from "./components/organisms/home";
+import Contact from "./components/organisms/contact";
+import Footer from "./components/organisms/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +29,29 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex justify-end items-center p-4 gap-4 h-16">
+        <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+          <div className="text-xl font-bold text-primary">KartGen</div>
+          <div className="flex items-center gap-4">
+          <Home />
+          <Products/>
+          <About/>
+          <Contact/>
         <SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
-              <UserButton />
+              <UserButton /> 
             </SignedIn> 
+          </div>
+          </div>
         </header>
         {children}
+        <Footer/>
       </body>
     </html>
     </ClerkProvider>
   );
 }
+
+

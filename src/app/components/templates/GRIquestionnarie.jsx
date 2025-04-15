@@ -2,6 +2,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Textarea } from "@/components/ui/textarea";
 import GRIData from "../../../../data/GRIData";
+import { Button } from "@/components/ui/button";
 
 
 export default function Questionnarie() {
@@ -20,7 +21,9 @@ export default function Questionnarie() {
                 <li key={index} className="space-y-2">
                   <p className="font-medium">{disclosure}</p>
                   <Textarea placeholder={`Write your notes for ${disclosure}`} />
+                  <Button>Submit</Button>
                   <Textarea placeholder={`Write a comment for improvement`} />
+                  <Button>Submit</Button>
                 </li>
               ))}
             </ul>

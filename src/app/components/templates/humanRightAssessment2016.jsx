@@ -2,6 +2,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Textarea } from "@/components/ui/textarea";
 import HumanRightAssessment from "../../../../data/HumanRightAssessment";
+import { Button } from "@/components/ui/button";
 
 export default function HumanRightsAssessment2016() {
 
@@ -18,7 +19,9 @@ export default function HumanRightsAssessment2016() {
             <li key={index} className="space-y-2">
               <p className="font-medium">{disclosure}</p>
               <Textarea placeholder={`Write your notes for ${disclosure}`} />
+              <Button>Submit</Button>
               <Textarea placeholder={`Write a comment for improvement`} />
+              <Button>Submit</Button>
             </li>
           ))}
         </ul>
